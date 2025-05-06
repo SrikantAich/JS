@@ -15,3 +15,5 @@ console.log("temperature (null value) = " + temperature); // null
 
 // Use case: Resetting fields, clearing selections, placeholder for future data
 
+console.log(typeof null)//object
+console.log(typeof undefined)//undefined
