@@ -1,115 +1,130 @@
 // JavaScript Data Types
 // ----------------------
-// 1. Primitive Data Types (immutable, stored by value)
-// 2. Non-Primitive Data Types (mutable, stored by reference)
+// 1. Primitive Data Types (stored by value, immutable)
+// 2. Non-Primitive Data Types (stored by reference, mutable)
 
 
 // 1. Primitive Data Types
 // -----------------------
 
 // 1.1 Number
-let num = 10;              // Integer number
-let num2 = 10.5;           // Floating-point number
-let num3 = 10e5;           // Exponential notation (10 * 10^5 = 1000000)
-let num4 = 10e-5;          // Exponential notation (10 * 10^-5 = 0.0001)
-let num5 = 10.5e5;         // Exponential notation (10.5 * 10^5 = 1050000)
-let num6 = 10.5e-5;        // Exponential notation (10.5 * 10^-5 = 0.000105)
-let num7 = 10.5e+5;        // Same as above, + sign is optional in exponent
+// Used for any kind of numeric calculation — prices, scores, ages, etc.
+let num = 10;                   // Integer
+let num2 = 10.5;                // Floating-point number
+let num3 = 10e5;                // Exponential: 10 * 10^5 = 1000000
+let num4 = 10e-5;               // Exponential: 10 * 10^-5 = 0.0001
+let notANumber = NaN;           // Result of invalid arithmetic (e.g., "abc" * 2)
+let inf = Infinity;            // Result of division by 0
+let negInf = -Infinity;
 
-// Special numeric values
-let inf = Infinity;         // Infinity (e.g., 1 / 0)
-let negInf = -Infinity;    // Negative Infinity
-let notANumber = NaN;      // "Not a Number" (e.g., "abc" * 3)
+console.log("num3 (Exponential 10e5) = " + num3);    // 1000000
+console.log("num4 (Exponential 10e-5) = " + num4);   // 0.0001
+console.log("notANumber = " + notANumber);          // NaN
+console.log("Infinity = " + inf);                   // Infinity
+
+// Use case: Calculating total price, interest rates, temperature, etc.
 
 
 // 1.2 String
-let str = "Hello World";   // Double-quoted string
-let str2 = 'Hello World';  // Single-quoted string
-let str3 = `Hello World`;  // Template literal (allows interpolation like `${var}`)
+// Used for text data: names, messages, labels, HTML content, etc.
+let str = "Hello";
+let str2 = 'World';
+let str3 = `Hello ${str2}`; // Template literal — useful for combining variables
+
+console.log("str3 (Template literal) = " + str3);  // Hello World
+
+// Use case: Chat messages, form input, displaying data on UI.
 
 
 // 1.3 Boolean
-let bool = true;           // Boolean true
-let bool2 = false;         // Boolean false
-let bool3 = Boolean(true);       // true
-let bool4 = Boolean(false);      // false
-let bool5 = Boolean(1);          // true (1 is truthy)
-let bool6 = Boolean(0);          // false (0 is falsy)
-let bool7 = Boolean("Hello");    // true (non-empty string is truthy)
-let bool8 = Boolean("");         // false (empty string is falsy)
-console.log(bool8);              // false
+// Represents true/false — used in logic, conditions, toggles, validations.
+let bool = true;
+let bool2 = false;
+let bool3 = Boolean(1);         // true — 1 is truthy
+let bool4 = Boolean(0);         // false — 0 is falsy
+let bool5 = Boolean("Hi");      // true — non-empty string is truthy
+let bool6 = Boolean("");        // false — empty string is falsy
+
+console.log("bool3 (Boolean of 1) = " + bool3);     // true
+console.log("bool6 (Boolean of '') = " + bool6);   // false
+
+// Use case: User logged in? Button enabled? Form valid?
 
 
 // 1.4 Undefined
-let undef;                      // Variable declared but not assigned => undefined
-let undef2 = undefined;         // Explicit assignment of undefined (not recommended)
+// Variable declared but no value assigned — often accidental
+let undef;
+let undef2 = undefined;         // Explicit, but not recommended
+
+console.log("undef (uninitialized variable) = " + undef); // undefined
+
+// Use case: Checking if a value has been set or loaded yet
 
 
 // 1.5 Symbol
-// Unique and immutable identifier, often used as object property keys
-let sym = Symbol();             // Symbol without description
-let sym2 = Symbol("Hello");     // Symbol with description
-let sym3 = Symbol("Hello");     // Different symbol, even with same description
-console.log(sym2 === sym3);     // false - every Symbol is unique
+// Used for creating unique identifiers — especially as object keys in libraries/frameworks
+let sym1 = Symbol("id");
+let sym2 = Symbol("id");
+
+console.log("sym1 === sym2 = " + (sym1 === sym2));  // false — Symbols are always unique
+
+// Use case: Hidden object properties, internal framework logic
 
 
 // 1.6 BigInt
-// Used for integers beyond Number.MAX_SAFE_INTEGER
-let bigInt = BigInt(10);        // BigInt from integer
-// let bigInt2 = BigInt(10.5);  // ❌ Error: BigInt only accepts integers
-let bigInt3 = BigInt(1e6);      // BigInt from exponential integer (1e6 = 1000000n)
+// For very large integers beyond the safe range of Number
+let bigInt = BigInt(9007199254740991);  // Max safe integer
+let bigInt2 = BigInt(1e20);             // Very large integer
+
+console.log("bigInt2 (Large integer) = " + bigInt2); // 100000000000000000000n
+
+// Use case: Cryptography, scientific calculations, financial data
 
 
 // 1.7 Null
-let nul = null;                 // null explicitly means "no value"
-let nul2 = null;                // Used to intentionally clear or reset a variable
-// Example use case: null to represent unknown temperature
-let temperature = null;         // Temperature not recorded yet
+// Represents "no value" intentionally — different from undefined
+let temperature = null;
+
+console.log("temperature (null value) = " + temperature); // null
+
+// Use case: Resetting fields, clearing selections, placeholder for future data
 
 
 // 1.8 Object
-// Objects are collections of key-value pairs
-let obj = { name: "John", age: 30 };      // Object with 2 properties
-let obj2 = { name: "John", age: 30 };     // Another object with same keys/values
+// A collection of key-value pairs — used to group related data
+let user = {
+  name: "Alice",
+  age: 25,
+  isAdmin: false
+};
 
-// Accessing properties
-console.log(obj.name);         // "John"
-console.log(obj["age"]);       // 30
+console.log("user.name = " + user.name);           // Alice
+console.log("user['age'] = " + user["age"]);       // 25
+
+// Use case: Storing user profiles, product info, API responses
 
 
 // 1.9 Array
-// Arrays are ordered collections of values
-let arr = [1, 2, 3, 4, 5];     // Array of numbers
-let arr2 = ["a", "b", "c"];    // Array of strings
-let arr3 = [true, 42, "Hi"];   // Mixed data types
+// Ordered list — index-based — can hold any data types
+let scores = [95, 87, 78];
+let items = ["apple", "banana", "grape"];
+let mixed = [true, 42, "hello"];
 
-// Accessing array elements
-console.log(arr[0]);           // 1
-console.log(arr2[2]);          // "c"
+console.log("scores[0] = " + scores[0]);            // 95
+console.log("items[2] = " + items[2]);              // grape
+console.log("typeof scores = " + typeof scores);    // object
 
-// Arrays are objects under the hood
-console.log(typeof arr);       // "object"
+// Use case: Lists of users, products, messages, notifications
 
 
-// Summary Notes
-// -------------
-// Primitive Data Types:
-// - Stored by value
-// - Immutable
-// - Includes: Number, String, Boolean, Null, Undefined, Symbol, BigInt
+// Summary: typeof checks
+console.log("typeof num = " + typeof num);         // number
+console.log("typeof str = " + typeof str);         // string
+console.log("typeof bool = " + typeof bool);       // boolean
+console.log("typeof undef = " + typeof undef);     // undefined
+console.log("typeof null = " + typeof null);       // object (quirk in JavaScript)
+console.log("typeof sym1 = " + typeof sym1);       // symbol
+console.log("typeof bigInt = " + typeof bigInt);   // bigint
+console.log("typeof user = " + typeof user);       // object
+console.log("typeof scores = " + typeof scores);   // object
 
-// Non-Primitive Data Types:
-// - Stored by reference
-// - Mutable
-// - Includes: Object, Array, Function
-
-// Use `typeof` operator to check the type of a value
-console.log(typeof num);       // "number"
-console.log(typeof str);       // "string"
-console.log(typeof bool);      // "boolean"
-console.log(typeof undef);     // "undefined"
-console.log(typeof nul);       // "object" (this is a historical JavaScript quirk)
-console.log(typeof sym);       // "symbol"
-console.log(typeof bigInt);    // "bigint"
-console.log(typeof obj);       // "object"
-console.log(typeof arr);       // "object"
