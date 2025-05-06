@@ -7,15 +7,7 @@
 
 
 
-// 1.4 Undefined
-// Variable declared but no value assigned — often accidental
-let undef;
-let undef2 = undefined;         // Explicit, but not recommended
-
-console.log("undef (uninitialized variable) = " + undef); // undefined
-
-// Use case: Checking if a value has been set or loaded yet
-
+/
 
 // 1.5 Symbol
 // Used for creating unique identifiers — especially as object keys in libraries/frameworks
@@ -36,14 +28,6 @@ console.log("bigInt2 (Large integer) = " + bigInt2); // 100000000000000000000n
 
 // Use case: Cryptography, scientific calculations, financial data
 
-
-// 1.7 Null
-// Represents "no value" intentionally — different from undefined
-let temperature = null;
-
-console.log("temperature (null value) = " + temperature); // null
-
-// Use case: Resetting fields, clearing selections, placeholder for future data
 
 
 // 1.8 Object
