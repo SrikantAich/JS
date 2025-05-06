@@ -8,9 +8,15 @@
 //function scope means that the variable is accessible within the function where it is defined
 //global scope means that the variable is accessible throughout the entire program
 
-let x = 5; // block scoped variable
-const y = 10; // block scoped constant
-var z = 15; // global variable
 
 
+
+let name="Srikant Aich"
+let age=24
+let email="abc@gmail.com"
+const id=123456789
+
+console.log(typeof name)
+console.log(typeof age)
+console.table({name, age , email,id})
 

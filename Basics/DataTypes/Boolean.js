@@ -8,3 +8,6 @@ let bool5=Boolean('Hello')//if you pass astring its true
 let bool6=Boolean('')//if you pass an empty string its false
 
 console.table({bool1,bool2,bool3,bool4,bool5,bool6})
+
+
+

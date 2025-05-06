@@ -8,3 +8,6 @@ console.log("str3 (Template literal) = " + str3);  // Hello World
 
 // Use case: Chat messages, form input, displaying data on UI.
 
+let string1="Srikant"
+let String2="Aich"
+

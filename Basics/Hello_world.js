@@ -5,3 +5,5 @@ console.log("Hello, World!");
 // While the basic functionality is consistent, the way messages are displayed may vary slightly across different environments.
 // In web browsers, messages are typically displayed in the developer console, which can be accessed through the browser's developer tools.
 // In Node.js, messages are printed to the terminal or command prompt where the script is executed.
+
+

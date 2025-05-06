@@ -12,4 +12,8 @@ let inf = Infinity;            // Result of division by 0
 let negInf = -Infinity;         // Negative infinity
 
 
-console.log(typeof NaN)
+
+
+
+
+
