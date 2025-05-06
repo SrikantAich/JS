@@ -1,4 +1,5 @@
 # JavaScript Basics
+ ⚠️ **Note:** This repository is a work in progress. Content is being added and updated **daily**. Some sections may be incomplete — stay tuned for regular updates!
 
 Welcome to the **JavaScript Basics** project! This repository is designed for beginners who want to learn the fundamentals of JavaScript — the most widely used language for web development.
 
