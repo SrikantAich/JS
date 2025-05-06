@@ -4,51 +4,7 @@
 // 2. Non-Primitive Data Types (stored by reference, mutable)
 
 
-// 1. Primitive Data Types
-// -----------------------
 
-// 1.1 Number
-// Used for any kind of numeric calculation — prices, scores, ages, etc.
-let num = 10;                   // Integer
-let num2 = 10.5;                // Floating-point number
-let num3 = 10e5;                // Exponential: 10 * 10^5 = 1000000
-let num4 = 10e-5;               // Exponential: 10 * 10^-5 = 0.0001
-let notANumber = NaN;           // Result of invalid arithmetic (e.g., "abc" * 2)
-let inf = Infinity;            // Result of division by 0
-let negInf = -Infinity;
-
-console.log("num3 (Exponential 10e5) = " + num3);    // 1000000
-console.log("num4 (Exponential 10e-5) = " + num4);   // 0.0001
-console.log("notANumber = " + notANumber);          // NaN
-console.log("Infinity = " + inf);                   // Infinity
-
-// Use case: Calculating total price, interest rates, temperature, etc.
-
-
-// 1.2 String
-// Used for text data: names, messages, labels, HTML content, etc.
-let str = "Hello";
-let str2 = 'World';
-let str3 = `Hello ${str2}`; // Template literal — useful for combining variables
-
-console.log("str3 (Template literal) = " + str3);  // Hello World
-
-// Use case: Chat messages, form input, displaying data on UI.
-
-
-// 1.3 Boolean
-// Represents true/false — used in logic, conditions, toggles, validations.
-let bool = true;
-let bool2 = false;
-let bool3 = Boolean(1);         // true — 1 is truthy
-let bool4 = Boolean(0);         // false — 0 is falsy
-let bool5 = Boolean("Hi");      // true — non-empty string is truthy
-let bool6 = Boolean("");        // false — empty string is falsy
-
-console.log("bool3 (Boolean of 1) = " + bool3);     // true
-console.log("bool6 (Boolean of '') = " + bool6);   // false
-
-// Use case: User logged in? Button enabled? Form valid?
 
 
 // 1.4 Undefined
