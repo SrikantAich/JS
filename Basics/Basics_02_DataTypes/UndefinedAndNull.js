@@ -9,11 +9,9 @@ console.log("undef (uninitialized variable) = " + undef); // undefined
 // 1.7 Null
 // Represents "no value" intentionally — different from undefined
 let temperature = null;
-
 console.log("temperature (null value) = " + temperature); // null
 
 // Use case: Resetting fields, clearing selections, placeholder for future data
-
 console.log(typeof null)//object
 console.log(typeof undefined)//undefined
 
