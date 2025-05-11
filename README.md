@@ -22,19 +22,3 @@ By the end of this project, you'll understand the core JavaScript concepts and b
 - ✅ ES6+ Features (let/const, template literals, destructuring, etc.)
 
 ---
-
-## 📁 Project Structure
-
-```bash
-javascript-basics/
-├── 01-introduction/
-├── 02-variables-and-data-types/
-├── 03-operators-and-expressions/
-├── 04-conditionals/
-├── 05-loops/
-├── 06-functions/
-├── 07-arrays-and-objects/
-├── 08-dom-manipulation/
-├── 09-events/
-├── 10-es6-features/
-└── README.md
