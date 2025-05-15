@@ -8,3 +8,10 @@ let employee1={
 
 console.log(employee1.Name)
 console.log(employee1['Name'] , employee1['Salary'])
+
+// let variableName={
+//   key: "Value"
+// }
+
+// variableName.key
+// variableName['key']
